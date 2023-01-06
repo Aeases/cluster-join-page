@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import cn from 'classnames'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,13 +18,18 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
   
-        <div className={styles.center}>
+        <div className={cn(styles.center, "flex-col gap-4")}>
           <a href="steam://connect/58.169.7.212:27015/e">
-          <div className={styles.thirteen}>
-            <p>Join Quartex - Scorched</p>
+          <div className={cn(styles.thirteen, "ring-0 hover:ring-2 ring-red-500 transition-all duration-200")}>
+            <p>Join Quartex - Scorched (Included Password looks like it freezes, actually doesnt)</p>
           </div>
           </a>
 
+          <a href="steam://connect/58.169.7.212:27015">
+          <div className={cn(styles.thirteen, "ring-0 hover:ring-2 ring-green-500 transition-all duration-200")}>
+            <p>Join Quartex - Scorched - No Included Password</p>
+          </div>
+          </a>
         </div>
 
 
