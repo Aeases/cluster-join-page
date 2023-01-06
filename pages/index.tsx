@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
   
         <div className={styles.center}>
-          <a href="steam://connect/58.169.7.212:27015">
+          <a href="steam://connect/58.169.7.212:27015/e">
           <div className={styles.thirteen}>
             <p>Join Quartex - Scorched</p>
           </div>
