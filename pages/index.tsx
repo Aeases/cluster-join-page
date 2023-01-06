@@ -27,11 +27,7 @@ export default function Home() {
 
         <div className={styles.center}>
 
-          <a>
-          <div className={styles.thirteen}>
-            <p>Join Quartex - Scorched</p>
-          </div>
-          </a>
+
 
         </div>
 
