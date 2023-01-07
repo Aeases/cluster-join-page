@@ -51,32 +51,32 @@ export default function Home() {
       <main className={styles.main}>
         <div className={cn("flex-row flex flex-wrap gap-2")}>
         <a>
-          <div className={cn(styles.thirteen, "ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
+          <div className={cn(styles.thirteen, "transition=all ring-0 hover:ring-2 ring-gray-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
             Join Quartex - Island
           </div>
         </a>
           <a href="steam://connect/58.169.7.212:27015/e">
-            <div className={cn(styles.thirteen, "ring-0 hover:ring-2 ring-green-500 transition-all duration-200 my-3")}>
+            <div className={cn(styles.thirteen, styles.thirteenanim, "rounded-lg ring-0 hover:ring-2 ring-green-500 transition-all duration-200 my-3")}>
               Join Quartex - Scorched
             </div>
           </a>
-          <a>
-          <div className={cn(styles.thirteen, "ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
+          <a href="steam://connect/58.169.7.212:27020/e">
+          <div className={cn(styles.thirteen, "flex-grow animate-bounce ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-pointer bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
             Join Quartex - Abberation
           </div>
           </a>
           <a>
-          <div className={cn(styles.thirteen, "ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
+          <div className={cn(styles.thirteen, "flex-grow ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
             Join Quartex - Extinction
           </div>
           </a>
           <a>
-          <div className={cn(styles.thirteen, "ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
+          <div className={cn(styles.thirteen, "flex-grow ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
             Join Quartex - Genesis 1
           </div>
           </a>
           <a>
-          <div className={cn(styles.thirteen, "ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
+          <div className={cn(styles.thirteen, "flex-grow w-full ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
             Join Quartex - Genesis 2
           </div>
           </a>
