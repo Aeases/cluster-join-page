@@ -1,6 +1,6 @@
 
-export const gameini = `
-[/script/shootergame.shootergamemode]
+export const gameini =
+`[/script/shootergame.shootergamemode]
 GlobalSpoilingTimeMultiplier=5
 GlobalItemDecompositionTimeMultiplier=3
 GlobalCorpseDecompositionTimeMultiplier=3
@@ -334,8 +334,8 @@ DerpArmorRadius=8000
 DerpStructureRadius=8000
 
 [MessageOfTheDay]
-Duration=15
-Message=EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+Duration=60
+Message=When Transferring/Ascending to another ark MAKE SURE TO SELECT SHOW PASSWORD LOCKED SESSIONS!!!!!
 
 [ScalabilityGroups]
 sg.AntiAliasingQuality=3
@@ -385,7 +385,7 @@ RemoteUsesDurability=10
 ?PreventUploadDinos=True
 ?PreventUploadItems=True
 ?PreventUploadSurvivors=False
-ActiveMods=2874066786,1522327484,1445395055,731604991,889745138,1149487646,821530042,848498678,1404697612,670764308,702828089,1609138312,1814953878,2862832839,816908578,972887420,2871123928,1428596566,1295978823,1092784125,2876145300,2848812341,2856914628
+ActiveMods=2874066786,1522327484,1445395055,731604991,889745138,821530042,848498678,1404697612,670764308,702828089,1609138312,1814953878,2862832839,816908578,972887420,2871123928,1428596566,1295978823,1092784125,2876145300,2848812341,2856914628
 DinoCharacterHealthRecoveryMultiplier=5.0
 AllowAnyoneBabyImprintCuddle=True
 AlwaysNotifyPlayerJoined=False
@@ -437,7 +437,7 @@ RCONEnabled=True
 RCONPort=32330
 RCONServerGameLogBuffer=600.000000
 RaidDinoCharacterFoodDrainMultiplier=1.000000
-ServerAdminPassword=REDACTED
+ServerAdminPassword=40d12d76-2e7b-4c08-91ef-81e5df527531
 AdminLogging=true
 ServerCrosshair=true
 ServerForceNoHUD=False
@@ -620,5 +620,4 @@ Rock3=10
 Rock4=10
 
 [SessionSettings]
-SessionName=Quartex - Scorched
-`;
+SessionName=Quartex - Scorched`;
