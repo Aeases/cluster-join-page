@@ -21,6 +21,7 @@ export default function Home() {
     minimap: {enabled: false},
     links: false,
     readOnly: true,
+    smoothScrolling: true,
   }
   const files: { [key: string]: EditorFile } = {
     "gameini": {
