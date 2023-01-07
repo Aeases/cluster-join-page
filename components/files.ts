@@ -31,13 +31,13 @@ FishingLootQualityMultiplier=7.5
 AdminLogging=true
 PerLevelStatsMultiplier_Player[0]=2
 PerLevelStatsMultiplier_DinoTamed[0]=5
-PerLevelStatsMultiplier_DinoWild[0]=4
+PerLevelStatsMultiplier_DinoWild[0]=6
 PerLevelStatsMultiplier_Player[1]=5
 PerLevelStatsMultiplier_DinoTamed[1]=7.5
 PerLevelStatsMultiplier_DinoWild[1]=2.5
 PerLevelStatsMultiplier_Player[2]=1
 PerLevelStatsMultiplier_DinoTamed[2]=1
-PerLevelStatsMultiplier_DinoWild[2]=1
+PerLevelStatsMultiplier_DinoWild[2]=3
 PerLevelStatsMultiplier_Player[3]=2
 PerLevelStatsMultiplier_DinoTamed[3]=2
 PerLevelStatsMultiplier_DinoWild[3]=2
@@ -232,8 +232,8 @@ ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_
 ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntriesWyvernTrench_C",NPCSpawnEntries=((NPCsToSpawnStrings=("Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'"))),NPCSpawnLimits=((NPCClassString="Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'")))
 `;
 
-export const gusini = `
-[/Game/Mods/El_Ballerin_De_La_Muerte/TestGameMode_SuperDinoMod.TestGameMode_SuperDinoMod_C]
+export const gusini =
+`[/Game/Mods/El_Ballerin_De_La_Muerte/TestGameMode_SuperDinoMod.TestGameMode_SuperDinoMod_C]
 BabyCuddleIntervalMultiplier=0.020000
 ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Cave_QualityTier1_EX",MinItemSets=0,MaxItemSets=1,NumItemSetsPower=0,bSetsRandomWithoutReplacement=True,ItemSets=((SetName="Carcha Saddle",ItemEntries=((ItemEntryName="Blueprints: Saddles",Items=(BlueprintGeneratedClass'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_CarchaSaddle.PrimalItemArmor_CarchaSaddle_C'),MinQuantity=1.000000,MinQuality=1.000000,bForceBlueprint=False,ChanceToBeBlueprintOverride=0.500000,ChanceToActuallyGiveItem=0.900000)),SetWeight=0.015000,bItemsRandomWithoutReplacement=True)),bAppendItemSets=True,bAppendPreventIncreasingMinMaxItemSets=False)
 ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Cave_QualityTier2_EX",MinItemSets=0,MaxItemSets=1,NumItemSetsPower=0,bSetsRandomWithoutReplacement=True,ItemSets=((SetName="Carcha Saddle",ItemEntries=((ItemEntryName="Blueprints: Saddles",Items=(BlueprintGeneratedClass'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_CarchaSaddle.PrimalItemArmor_CarchaSaddle_C'),MinQuantity=1.000000,MinQuality=1.000000,bForceBlueprint=False,ChanceToBeBlueprintOverride=0.500000,ChanceToActuallyGiveItem=0.900000)),SetWeight=0.015000,bItemsRandomWithoutReplacement=True)),bAppendItemSets=True,bAppendPreventIncreasingMinMaxItemSets=False)
