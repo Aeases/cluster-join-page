@@ -4,9 +4,9 @@ import styles from '../styles/ServerButtonComponent.module.css'
 import { GiCombinationLock } from 'react-icons/gi'
 export default function ServerButtonComponent({ Locked, IP, queryport, ServerName, password }: {Locked: boolean, IP: string, queryport: string, ServerName: string, password: string}) {
     let Address: string = ''
-    if (Locked === false ) {
+    if (Locked === true ) {
         Address = ''
-    } else if (Locked === true && IP && queryport) {
+    } else if (Locked === false && IP && queryport) {
         Address = `${IP}:${queryport}`
     }
     return(
