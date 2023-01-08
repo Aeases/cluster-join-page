@@ -68,11 +68,11 @@ export default function Home() {
         </div>
         <div className="flex flex-col border-slate-600 border-4 rounded-lg hover:border-green-500 transition-colors duration-150 w-full max-w-5xl">
           <div className="flex gap-2">
-          <button className={cn('bg-[#1e1e1e] ring-0 active:bg-[#3a3a3a]  disabled:bg-[#272727] enabled:hover:ring-2 ring-gray-400 py-1 px-2 flex-grow shadow-md transition-colors ')} disabled={fileName === "gameini"} onClick={() => setFileName("gameini")}>Game Settings</button>
-          <button className={cn('bg-[#1e1e1e] ring-0 active:bg-[#3a3a3a] disabled:bg-[#272727] enabled:hover:ring-2 ring-gray-400 py-1 px-2 flex-grow shadow-md transition-colors')} disabled={fileName === "gusini"} onClick={() => setFileName("gusini")}>Game User Settings</button>
+          <button className={cn('bg-[#1e1e1e] outline-0 active:bg-[#3a3a3a]  disabled:bg-[#272727] enabled:hover:border-2 border-gray-500 py-1 px-2 w-full flex-grow shadow-md transition-all ')} disabled={fileName === "gameini"} onClick={() => setFileName("gameini")}>Game Settings</button>
+          <button className={cn('bg-[#1e1e1e] outline-0 active:bg-[#3a3a3a] disabled:bg-[#272727] enabled:hover:border-2 border-gray-500 py-1 px-2 w-full flex-grow shadow-md transition-all')} disabled={fileName === "gusini"} onClick={() => setFileName("gusini")}>Game User Settings</button>
           </div>
         <div className="w-full h-full flex justify-center">
-        <div className={cn(styles.center, "flex-col gap-4")}/> 
+        <div className={cn(styles.center, "flex-col gap-4 rounded-lg overflow-hidden")}/> 
         <Editor
           height="50vh"
           width="100%"
