@@ -61,7 +61,7 @@ export default function Home() {
         </div>
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27116' ServerName='Island' password='e' />
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27015' ServerName='Scorched' password='e' />
-        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27020' ServerName='Abberant' password='e' />
+        <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27020' ServerName='Abberant' password='e' />
         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Extinct' password='e' />
         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Genesis' password='e' />
         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Genesis 2' password='e' />
