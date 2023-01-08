@@ -56,6 +56,9 @@ export default function Home() {
 
 
         <div className="grid grid-flow-row gap-1 grid-cols-2 justify-around m-3 w-full max-w-5xl">
+        <div className="bg-[#1e1e1e] p-3 col-span-2 text-center font-mono font-bold text-4xl m-0 rounded-md py-[0.45rem]">
+          Quartex Cluster
+        </div>
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27116' ServerName='Island' password='e' />
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27015' ServerName='Scorched' password='e' />
         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27020' ServerName='Abberant' password='e' />
