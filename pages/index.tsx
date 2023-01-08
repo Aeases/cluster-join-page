@@ -6,6 +6,7 @@ import cn from 'classnames'
 import Editor from '@monaco-editor/react'
 import { useState } from 'react'
 import { gameini, gusini } from './../components/files'
+import ServerButtonComponent from '../components/ServerButtonComponent'
 const inter = Inter({ subsets: ['latin'] })
 
 interface EditorFile {
@@ -37,7 +38,7 @@ export default function Home() {
   };
 
   const [fileName, setFileName] = useState("gameini");
-
+  const CurrentIP = '58.169.7.212'
   const file = files[fileName];
   return (
     
@@ -52,38 +53,15 @@ export default function Home() {
         <p className="font-bold text-red-500 p-3 mb-3 font-sans text-lg">Game may appear frozen while joining.</p>
         <div className={cn(styles.center, "flex-col gap-4 rotate-90")}/> 
 
-        <div className={cn("flex-row flex flex-wrap gap-2 my-2")}>
-          
-        <a>
-          <div className={cn(styles.thirteen, "transition=all ring-0 hover:ring-2 ring-gray-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
-            Join Quartex - Island
-          </div>
-        </a>
-          <a href="steam://connect/58.169.7.212:27015/e">
-            <div className={cn(styles.thirteen, styles.thirteenanim, "rounded-lg ring-0 hover:ring-2 ring-green-500 transition-all duration-200 my-3")}>
-              Join Quartex - Scorched
-            </div>
-          </a>
-          <a href="steam://connect/58.169.7.212:27020/e">
-          <div className={cn(styles.thirteen, "flex-grow animate-bounce ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-pointer bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
-            Join Quartex - Abberation
-          </div>
-          </a>
-          <a>
-          <div className={cn(styles.thirteen, "flex-grow ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
-            Join Quartex - Extinction
-          </div>
-          </a>
-          <a>
-          <div className={cn(styles.thirteen, "flex-grow ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
-            Join Quartex - Genesis 1
-          </div>
-          </a>
-          <a>
-          <div className={cn(styles.thirteen, "flex-grow w-full ring-0 hover:ring-2 ring-red-500 transition-all duration-200 my-3 bg-clip-content cursor-not-allowed bg-linear-gradient-to-br from-[rgb(239,68,68,1)] to-[rgb(239,68,68,1)]")}>
-            Join Quartex - Genesis 2
-          </div>
-          </a>
+
+
+        <div className="grid grid-flow-row gap-1 grid-cols-2 justify-around m-3 w-full max-w-5xl">
+        <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27116' ServerName='Island' password='e' />
+        <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27015' ServerName='Scorched' password='e' />
+        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27020' ServerName='Abberant' password='e' />
+        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Extinct' password='e' />
+        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Genesis' password='e' />
+        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Genesis 2' password='e' />
         </div>
         <div className="flex flex-col border-slate-600 border-4 rounded-lg hover:border-green-500 transition-colors duration-150 w-full max-w-5xl">
           <div className="flex gap-2">
