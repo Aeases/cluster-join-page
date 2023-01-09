@@ -16,6 +16,9 @@ interface EditorFile {
 }
 
 export default function Home() {
+
+  const [state, setstate] = useState("")
+
   const options = {
     cursorSmoothCaretAnimation: true,
     cursorBlinking: "expand",
@@ -37,6 +40,8 @@ export default function Home() {
     },
   };
 
+
+
   const [fileName, setFileName] = useState("gameini");
   const CurrentIP = '124.187.142.191'
   const file = files[fileName];
@@ -44,15 +49,14 @@ export default function Home() {
     
     <>
       <Head>
-        <title>Quartex Servers</title>
-        <meta name="description" content="server lists" />
+        <title>Quartex</title>
+        <meta name="description" content="See the status of Quartex Servers" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <p className="font-bold text-red-500 p-3 mb-3 font-sans text-lg">Game may appear frozen while joining.</p>
         <div className={cn(styles.center, "flex-col gap-4 rotate-90")}/> 
-
 
 
         <div className="grid grid-flow-row gap-1 grid-cols-2 justify-around m-3 w-full max-w-5xl">
