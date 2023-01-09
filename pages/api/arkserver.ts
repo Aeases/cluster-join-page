@@ -2,7 +2,7 @@ import { Server } from "@fabricio-191/valve-server-query";
 import { NextApiRequest, NextApiResponse } from "next";
 export default function personHandler(
   req: NextApiRequest,
-  res: NextApiResponse<Person | ResponseError>
+  res: NextApiResponse,
 ) {
     async function serve() {
         const serve = await Server({
