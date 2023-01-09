@@ -16,6 +16,9 @@ interface EditorFile {
 }
 
 export default function Home() {
+
+  const [state, setstate] = useState("")
+
   const options = {
     cursorSmoothCaretAnimation: true,
     cursorBlinking: "expand",
@@ -37,6 +40,8 @@ export default function Home() {
     },
   };
 
+
+
   const [fileName, setFileName] = useState("gameini");
   const CurrentIP = '58.169.7.212'
   const file = files[fileName];
@@ -52,7 +57,6 @@ export default function Home() {
       <main className={styles.main}>
         <p className="font-bold text-red-500 p-3 mb-3 font-sans text-lg">Game may appear frozen while joining.</p>
         <div className={cn(styles.center, "flex-col gap-4 rotate-90")}/> 
-
 
 
         <div className="grid grid-flow-row gap-1 grid-cols-2 justify-around m-3 w-full max-w-5xl">
