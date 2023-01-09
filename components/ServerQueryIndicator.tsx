@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 export function ServerQueryIndicator({IP, queryport}: {IP: string, queryport: string}) {
     const [Status, setStatus]: any = useState()
 
-    async function CheckStatus() {
+/*     async function CheckStatus() {
         const response = await fetch('/api/arkserver')
         const data = await response.json()
         console.log(data)
@@ -14,7 +14,7 @@ export function ServerQueryIndicator({IP, queryport}: {IP: string, queryport: st
         CheckStatus()
         .then((e) => {e ? stringify(e) : ""})
         .then((e) => {setStatus(e)})
-    })
+    }) */
 
 
     return(
