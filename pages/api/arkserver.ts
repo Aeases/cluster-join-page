@@ -3,14 +3,9 @@ export default function Handler(req, res) {
     async function serve() {
         const serve = await Server({
           ip: '58.169.7.212',
-          port: 27015,
+          port: 27020,
           timeout: 3000,
         });
-        const info = await serve.getInfo();
-      
-        const players = await serve.getPlayers();
-      
-        
         const rules = await serve.getRules();
         return rules
         

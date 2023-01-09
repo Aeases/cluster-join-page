@@ -4,7 +4,6 @@ import styles from '../styles/ServerButtonComponent.module.css'
 import { GiCombinationLock } from 'react-icons/gi'
 import { GetServerSideProps } from "next";
 import { ServerQueryIndicator } from "./ServerQueryIndicator";
-const { Server, RCON, MasterServer } = require('@fabricio-191/valve-server-query');
 export default function ServerButtonComponent({ Locked, IP, queryport, ServerName, password }: {Locked: boolean, IP: string, queryport: string, ServerName: string, password: string}) {
     let Address: string = ''
     if (Locked === true ) {
@@ -12,6 +11,8 @@ export default function ServerButtonComponent({ Locked, IP, queryport, ServerNam
     } else if (Locked === false && IP && queryport) {
         Address = `${IP}:${queryport}`
     }
+
+
 
     return(
         <a href={Locked ? undefined : `steam://connect/${Address}/${password}`}>
