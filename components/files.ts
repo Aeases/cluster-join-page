@@ -20,6 +20,7 @@ PassiveTameIntervalMultiplier=0.2
 LayEggIntervalMultiplier=0.6
 bUseCorpseLocator=true
 bDisableStructurePlacementCollision=true
+CropGrowthSpeedMultiplier=3
 bPVEDisableFriendlyFire=False
 bDisableFriendlyFire=False
 bIncreasePvPRespawnInterval=False
@@ -55,7 +56,7 @@ PerLevelStatsMultiplier_DinoTamed[7]=1000
 PerLevelStatsMultiplier_DinoWild[7]=1000
 PerLevelStatsMultiplier_Player[8]=3
 PerLevelStatsMultiplier_DinoTamed[8]=2
-PerLevelStatsMultiplier_DinoWild[8]=2
+PerLevelStatsMultiplier_DinoWild[8]=4
 PerLevelStatsMultiplier_Player[9]=3
 PerLevelStatsMultiplier_Player[10]=2
 PerLevelStatsMultiplier_DinoTamed[10]=2
@@ -113,6 +114,9 @@ ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_SubstrateAbso
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Propellant_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_CactusSap",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Clay",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="Gem_Fertile",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_BioLum_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_Element",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Crystal_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Metal_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawMeat_C",Multiplier=5.0)
@@ -434,10 +438,10 @@ PvEAllowStructuresAtSupplyDrops=False
 PvEDinoDecayPeriodMultiplier=1.000000
 PvPStructureDecay=false
 RCONEnabled=True
-RCONPort=32330
+RCONPort=32331
 RCONServerGameLogBuffer=600.000000
 RaidDinoCharacterFoodDrainMultiplier=1.000000
-ServerAdminPassword=40d12d76-2e7b-4c08-91ef-81e5df527531
+ServerAdminPassword=
 AdminLogging=true
 ServerCrosshair=true
 ServerForceNoHUD=False
@@ -582,42 +586,43 @@ ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="PrimalInventoryBP_Generi
 ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_IceCaveTier3",MinItemSets=0,MaxItemSets=1,NumItemSetsPower=0,bSetsRandomWithoutReplacement=True,ItemSets=((SetName="Carcha Saddle",ItemEntries=((ItemEntryName="Blueprints: Saddles",Items=(BlueprintGeneratedClass'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_CarchaSaddle.PrimalItemArmor_CarchaSaddle_C'),MinQuantity=1.000000,MinQuality=1.000000,MaxQuality=1.200000,bForceBlueprint=False,ChanceToBeBlueprintOverride=0.500000,ChanceToActuallyGiveItem=0.900000)),SetWeight=0.023000,bItemsRandomWithoutReplacement=True)),bAppendItemSets=True,bAppendPreventIncreasingMinMaxItemSets=False)
 
 [BestNarcotics]
-Arrow1DmgBow=6
-Arrow2DmgBow=10
-Arrow3DmgBow=10
-Arrow4DmgBow=8
-Arrow1DmgCompoundBow=14
-Arrow2DmgCompoundBow=14
-Arrow3DmgCompoundBow=14
-Arrow4DmgCompoundBow=14
-Arrow1DmgCrossBow=17.5
-Arrow2DmgCrossBow=17.5
-Arrow3DmgCrossBow=17.5
-Arrow4DmgCrossBow=12.5
-Boomerang1=15
-Boomerang2=15
-Boomerang3=15
-Boomerang4=15
-Dart1=13
-Dart2=13
-Dart3=13
-Dart4=13
-NewDart1=23.33
-NewDart2=23.33
-NewDart3=23.33
-NewDart4=23.33
-SpearBolt1=16
-SpearBolt2=16
-SpearBolt3=16
-SpearBolt4=16
-ThrowableSpearBolt1=12
-ThrowableSpearBolt2=12
-ThrowableSpearBolt3=12
-ThrowableSpearBolt4=12
+Arrow1DmgBow=1
+Arrow2DmgBow=1
+Arrow3DmgBow=1
+Arrow4DmgBow=3
+Arrow1DmgCompoundBow=1
+Arrow2DmgCompoundBow=1
+Arrow3DmgCompoundBow=1
+Arrow4DmgCompoundBow=1
+Arrow1DmgCrossBow=1
+Arrow2DmgCrossBow=1
+Arrow3DmgCrossBow=1
+Arrow4DmgCrossBow=1
+Boomerang1=1
+Boomerang2=1
+Boomerang3=1
+Boomerang4=1
+Dart1=1
+Dart2=1
+Dart3=1
+Dart4=1
+NewDart1=2
+NewDart2=2
+NewDart3=2
+NewDart4=2
+SpearBolt1=1
+SpearBolt2=1
+SpearBolt3=1
+SpearBolt4=1
+ThrowableSpearBolt1=1
+ThrowableSpearBolt2=1
+ThrowableSpearBolt3=1
+ThrowableSpearBolt4=1
 Rock1=6
-Rock2=10
-Rock3=10
-Rock4=10
+Rock2=1
+Rock3=1
+Rock4=1
 
 [SessionSettings]
-SessionName=Quartex - Scorched`;
+SessionName=Quartex - Abberant
+`;
