@@ -66,9 +66,9 @@ export default function Home() {
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27116' ServerName='Island' password='e' />
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27015' ServerName='Scorched' password='e' />
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27020' ServerName='Abberant' password='e' />
-{/*         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Extinct' password='e' />
+        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Extinct' password='e' />
         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Genesis' password='e' />
-        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Genesis 2' password='e' /> */}
+        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27116' ServerName='Genesis 2' password='e' />
         </div>
         <div className="flex flex-col border-slate-600 border-4 rounded-lg hover:border-green-500 transition-colors duration-150 w-full max-w-5xl">
           <div className="flex gap-2">
