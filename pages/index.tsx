@@ -43,7 +43,7 @@ export default function Home() {
 
 
   const [fileName, setFileName] = useState("gameini");
-  const CurrentIP = '58.169.7.212'
+  const CurrentIP = '124.187.142.191'
   const file = files[fileName];
   return (
     
