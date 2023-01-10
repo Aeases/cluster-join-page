@@ -7,6 +7,7 @@ import Editor from '@monaco-editor/react'
 import { useState } from 'react'
 import { gameini, gusini } from './../components/files'
 import ServerButtonComponent from '../components/ServerButtonComponent'
+import WorkshopList from '../components/WorkshopList'
 const inter = Inter({ subsets: ['latin'] })
 
 interface EditorFile {
@@ -39,7 +40,7 @@ export default function Home() {
       value: gusini,
     },
   };
-
+  const modIDURL = '2874066786*1522327484*1445395055*731604991*889745138*821530042*848498678*1404697612*670764308*702828089*1609138312*1814953878*2862832839*816908578*972887420*2871123928*1428596566*1295978823*1092784125*2876145300*2848812341*2856914628'
 
 
   const [fileName, setFileName] = useState("gameini");
@@ -91,7 +92,9 @@ export default function Home() {
         </div>
 
         </div>
-
+        <div>
+          <WorkshopList ModIDsURL={modIDURL} />
+        </div>
 
       </main>
     </>
