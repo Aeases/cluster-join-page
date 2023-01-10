@@ -112,11 +112,11 @@ ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Sulfur_C",Qua
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gasoline_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_SubstrateAbsorbent_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Propellant_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
-ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_CactusSap",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
-ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Clay",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
-ConfigOverrideItemMaxQuantity=(ItemClassString="Gem_Fertile",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_CactusSap_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Clay_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_Fertile_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_BioLum_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
-ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_Element",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_Element_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Crystal_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Metal_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawMeat_C",Multiplier=5.0)
@@ -213,9 +213,9 @@ HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Silicat
 OverrideMaxExperiencePointsPlayer=839801300000000000000000000000
 OverrideMaxExperiencePointsDino=50924810000000000000000000000000
 KillXPMultiplier=1.5
-HarvestXPMultiplier=1
-CraftXPMultiplier=0.5
-GenericXPMultiplier=1
+HarvestXPMultiplier=1.5
+CraftXPMultiplier=1.5
+GenericXPMultiplier=1.5
 SpecialXPMultiplier=2
 ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntries_DeathWorm_C",NPCSpawnEntries=((NPCsToSpawnStrings=("Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'"))),NPCSpawnLimits=((NPCClassString="Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'")))
 ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntries_RexSolo_C",NPCSpawnEntries=((NPCsToSpawnStrings=("Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'"))),NPCSpawnLimits=((NPCClassString="Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'")))
