@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import { z } from 'zod'
+import Image from "next/image"
 
 export default function WorkshopList({ ModIDsURL }: { ModIDsURL: string }) {
 
-    const [modInfo, setModInfo] = useState([{}])
+
 
     const APIResponseValidator = z.array(z.object({
         title: z.string(),
@@ -12,7 +13,7 @@ export default function WorkshopList({ ModIDsURL }: { ModIDsURL: string }) {
     }))
 
     type SteamWorkshopResponse = z.infer<typeof APIResponseValidator>
-
+    const [modInfo, setModInfo] = useState<SteamWorkshopResponse>()
     async function CallAPI() {
         const response = await fetch(`/api/WorkShopQuery/${ModIDsURL}`)
         const data = await response.json()
@@ -28,8 +29,23 @@ export default function WorkshopList({ ModIDsURL }: { ModIDsURL: string }) {
     }, [])
     return(
         <div>
-            <p>{`${modInfo.at(0)}`}</p>
-        {modInfo.map((e) => {return(<p>{`${e.title}`}</p>)})}
+            <ol>
+            {modInfo && modInfo.map((e) => {return(<WorkshopListItem title={e.title} preview_url={e.preview_url} publishedfileid={e.publishedfileid} key={e.publishedfileid}/>)})}
+            </ol>
         </div>
+    )
+}
+
+
+function WorkshopListItem({ title, preview_url, publishedfileid, key }: {title: string, preview_url: string, publishedfileid: string, key: string }) { // TODO See if I can avoid typing the API Repsonse here and somehow use SteamWorkshopResponse type instead of retyping
+
+    return(
+        <li className="flex bg-[#1e1e1e] p-1 m-2 rounded-md">
+            <img src={`${preview_url}`} alt={"Mod Image"} className="w-24 h-24 flex rounded-lg mr-2 " />
+            <div >
+            <p className="font-bold text-xl flex-grow w-full break-words">{title}</p>
+            <p className="text-gray-700 text-md">{publishedfileid}</p>
+            </div>
+        </li>
     )
 }
