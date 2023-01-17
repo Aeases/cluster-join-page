@@ -31,8 +31,8 @@ SupplyCrateLootQualityMultiplier=7.5
 FishingLootQualityMultiplier=7.5
 AdminLogging=true
 PerLevelStatsMultiplier_Player[0]=2
-PerLevelStatsMultiplier_DinoTamed[0]=5
-PerLevelStatsMultiplier_DinoWild[0]=6
+PerLevelStatsMultiplier_DinoTamed[0]=2
+PerLevelStatsMultiplier_DinoWild[0]=4
 PerLevelStatsMultiplier_Player[1]=5
 PerLevelStatsMultiplier_DinoTamed[1]=7.5
 PerLevelStatsMultiplier_DinoWild[1]=2.5
@@ -55,7 +55,7 @@ PerLevelStatsMultiplier_Player[7]=1000
 PerLevelStatsMultiplier_DinoTamed[7]=1000
 PerLevelStatsMultiplier_DinoWild[7]=1000
 PerLevelStatsMultiplier_Player[8]=3
-PerLevelStatsMultiplier_DinoTamed[8]=2
+PerLevelStatsMultiplier_DinoTamed[8]=1
 PerLevelStatsMultiplier_DinoWild[8]=4
 PerLevelStatsMultiplier_Player[9]=3
 PerLevelStatsMultiplier_Player[10]=2
@@ -70,6 +70,11 @@ NPCReplacements=(FromClassName="Blueprint'/Game/Mods/Jpark/Mini_Indom/MiniCamoIn
 DinoSpawnWeightMultipliers=(DinoNameTag="Deathworm_Character_BP_C",SpawnWeightMultiplier=1.75,OverrideSpawnLimitPercentage=true,SpawnLimitPercentage=1.0)
 OverrideNamedEngramEntries=(EngramClassName="Blueprint'/Game/Mods/CKF_Remastered/Structure_BPs/Crafting/Crafting_Tables/Masonry_Table/PrimalItemStructure_CKF_CraftingTable.PrimalItemStructure_CKF_CraftingTable",EngramHidden=False,RemoveEngramPreReq=True)
 OverrideNamedEngramEntries=(EngramClassName="Blueprint'/Game/Mods/CKF_Remastered/Structure_BPs/Crafting/Crafting_Tables/Villager_Table/PrimalItemStructure_CKF_VillagerTable.PrimalItemStructure_CKF_VillagerTable",EngramHidden=False,RemoveEngramPreReq=True)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SoulTraps_DS_C",EngramHidden=false,EngramPointsCost=20,EngramLevelRequirement=51)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SoulGun_DS_C",EngramHidden=false,EngramPointsCost=20,EngramLevelRequirement=51)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SoulFinder_DS_C",EngramHidden=false,EngramPointsCost=5,EngramLevelRequirement=51)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SoulTerminal_DS_C",EngramHidden=false,EngramPointsCost=60,EngramLevelRequirement=88)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_NarcTable_C",EngramHidden=true)
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_RawMeat_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_RawPrimeMeat_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_RawMeat_Fish_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
@@ -117,6 +122,10 @@ ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Clay_C",Quant
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_Fertile_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_BioLum_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_Gem_Element_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_FungalWood_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_FracturedGem",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_BlueSap",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemResource_CorruptedPolymer",Quantity=(MaxItemQuantity=100.0, bIgnoreMultiplier=true))
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Crystal_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Metal_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemConsumable_RawMeat_C",Multiplier=5.0)
@@ -156,7 +165,7 @@ HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Charcoa
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Chitin_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ChitinOrKeratin_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ChitinPaste_C",Multiplier=5.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Element_C",Multiplier=5.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Element_C",Multiplier=1.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Fibers_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Flint_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Hair_C",Multiplier=5.0)
@@ -182,7 +191,7 @@ HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_CommonM
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ApexDrop_Basilisk_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Gem_BioLum_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Gem_Element_C",Multiplier=5.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementOre_C",Multiplier=5.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementOre_C",Multiplier=1.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Gem_Fertile_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_FungalWood_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Gas_C",Multiplier=5.0)
@@ -200,16 +209,16 @@ HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_BlueSap
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_CondensedGas_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_CorruptedPolymer_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_CorruptedWood_C",Multiplier=5.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementDust_C",Multiplier=5.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementDustFromElement_C",Multiplier=5.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementDustFromShards_C",Multiplier=5.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementRefined_C",Multiplier=5.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementDust_C",Multiplier=2.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementDustFromElement_C",Multiplier=1.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementDustFromShards_C",Multiplier=1.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ElementRefined_C",Multiplier=2.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_FracturedGem_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_RedSap_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ScrapMetal_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ScrapMetalIngot_C",Multiplier=5.0)
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ShardRefined_C",Multiplier=5.0)
-HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Silicate_C",Multiplier=5.0)
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Silicate_C",Multiplier=2.0)
 OverrideMaxExperiencePointsPlayer=839801300000000000000000000000
 OverrideMaxExperiencePointsDino=50924810000000000000000000000000
 KillXPMultiplier=1.5
@@ -382,14 +391,27 @@ FindDinoCooldown=0
 MaxDinoUploadsPerTribe=0
 RemoteUsesDurability=10
 
+[AwesomeSpyGlass]
+AllowGPS=False
+AllowCrosshair=False
+AllowFoodList=True
+AllowBuffList=True
+AllowItemList=True
+AllowOutline=True
+AllowPlayerTargeting=True
+AllowStructureTargeting=False
+AllowCrateTargeting=True
+AllowLootTargeting=False
+AllowEggTargeting=True
+
 [ServerSettings]
-?PreventDownloadDinos=True
-?PreventDownloadItems=True
-?PreventDownloadSurvivors=False
-?PreventUploadDinos=True
-?PreventUploadItems=True
-?PreventUploadSurvivors=False
-ActiveMods=2874066786,1522327484,1445395055,731604991,889745138,821530042,848498678,1404697612,670764308,702828089,1609138312,1814953878,2862832839,816908578,972887420,2871123928,1428596566,1295978823,1092784125,2876145300,2848812341,2856914628
+PreventDownloadDinos=False
+PreventDownloadItems=True
+PreventDownloadSurvivors=False
+PreventUploadDinos=False
+PreventUploadItems=True
+PreventUploadSurvivors=False
+ActiveMods=2874066786,1522327484,2212177129,1445395055,731604991,972887420,889745138,821530042,848498678,1404697612,670764308,702828089,1609138312,1814953878,2862832839,816908578,2871123928,1428596566,1295978823,2876145300,2848812341,2856914628
 DinoCharacterHealthRecoveryMultiplier=5.0
 AllowAnyoneBabyImprintCuddle=True
 AlwaysNotifyPlayerJoined=False
@@ -441,7 +463,7 @@ RCONEnabled=True
 RCONPort=32331
 RCONServerGameLogBuffer=600.000000
 RaidDinoCharacterFoodDrainMultiplier=1.000000
-ServerAdminPassword=
+ServerAdminPassword=99a2cade-2e77-4206-9931-7d41305d76e1
 AdminLogging=true
 ServerCrosshair=true
 ServerForceNoHUD=False
@@ -459,6 +481,14 @@ TribeNameChangeCooldown=15.000000
 UseOptimizedHarvestingHealth=False
 AlwaysAllowStructurePickup=True
 
+[DinoStorage2]
+PreventCaveRelease=True
+PreventCaveRelease=True
+AllowBossCaveRelease=False
+AllowBossArenaRelease=False
+LockImprinter=True
+SoulTrapDelay=2.0
+
 [CKF_Config]
 CeilingIsFoundation=true
 DisableFoundationStacking=false
@@ -472,7 +502,7 @@ VillagerIsTek=false
 KeepIsWood=false
 KeepIsStone=false
 KeepIsTek=false
-DisableAutomaticDoors=false
+DisableAutomaticDoors=true
 PickupWhenDamaged=true
 DisablePickupDelayTimer=false
 DisablePickup=false
@@ -624,5 +654,5 @@ Rock3=1
 Rock4=1
 
 [SessionSettings]
-SessionName=Quartex - Abberant
+SessionName=Quartex - Extinct
 `;
