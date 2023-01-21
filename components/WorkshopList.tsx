@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { z } from 'zod'
 import Image from "next/image"
 
@@ -41,7 +41,7 @@ function WorkshopListItem({ title, preview_url, publishedfileid, key, }: {title:
     return(
         <a href={`https://steamcommunity.com/sharedfiles/filedetails/?id=${publishedfileid}`} target="_blank" rel="noreferrer" className="group">
             <li className="flex bg-[#1e1e1e] p-1 m-2 rounded-md group-hover:ring-2 transition-all ring-gray-500">
-            <Image src={`${preview_url}`} alt={"Mod Image"} width='96' height='96' className="w-24 h-24 flex rounded-lg mr-2 hover:bg-red-500" />
+            <Image src={`${preview_url}`} alt={"Mod Image"} width='96' height='96' className="w-24 h-24 flex rounded-lg mr-2 hover:bg-red-500"/>
             <div >
             <p className="font-bold text-xl flex-grow w-full break-words">{title}</p>
             <p className="text-gray-700 text-md">{publishedfileid}</p>
