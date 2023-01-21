@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import { z } from 'zod'
 import Image from "next/image"
 
@@ -27,22 +27,27 @@ export default function WorkshopList({ ModIDsURL }: { ModIDsURL: string }) {
     useEffect(() => {
         CallAPI()
     }, [])
+    const [listnumber, setlistnumber] = useState(0)
     return(
         <div>
             <ol>
-            {modInfo && modInfo.map((e) => {return(<WorkshopListItem title={e.title} preview_url={e.preview_url} publishedfileid={e.publishedfileid} key={e.publishedfileid}/>)})}
+            {modInfo && modInfo.map((e) => {return(<WorkshopListItem title={e.title} preview_url={e.preview_url} publishedfileid={e.publishedfileid} key={e.publishedfileid} listnumber={listnumber} setlistnumber={setlistnumber} /> )})}
             </ol>
         </div>
     )
 }
 
 
-function WorkshopListItem({ title, preview_url, publishedfileid, key }: {title: string, preview_url: string, publishedfileid: string, key: string }) { // TODO See if I can avoid typing the API Repsonse here and somehow use SteamWorkshopResponse type instead of retyping
 
+
+function WorkshopListItem({ title, preview_url, publishedfileid, key, listnumber, setlistnumber }: {title: string, preview_url: string, publishedfileid: string, key: string, listnumber: number, setlistnumber: Dispatch<SetStateAction<number>> }) { // TODO See if I can avoid typing the API Repsonse here and somehow use SteamWorkshopResponse type instead of retyping
+    let prioritystatus = false
+    
+    console.log(listnumber)
     return(
-        <a href={`https://steamcommunity.com/sharedfiles/filedetails/?id=${publishedfileid}`}>
-            <li className="flex bg-[#1e1e1e] p-1 m-2 rounded-md">
-            <img src={`${preview_url}`} alt={"Mod Image"} className="w-24 h-24 flex rounded-lg mr-2 " />
+        <a href={`https://steamcommunity.com/sharedfiles/filedetails/?id=${publishedfileid}`} target="_blank" rel="noreferrer" className="group">
+            <li className="flex bg-[#1e1e1e] p-1 m-2 rounded-md group-hover:ring-2 transition-all ring-gray-500">
+            <Image src={`${preview_url}`} alt={"Mod Image"} width='96' height='96' priority={prioritystatus} className="w-24 h-24 flex rounded-lg mr-2 hover:bg-red-500" />
             <div >
             <p className="font-bold text-xl flex-grow w-full break-words">{title}</p>
             <p className="text-gray-700 text-md">{publishedfileid}</p>

@@ -70,6 +70,9 @@ export default function Home() {
         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27415' ServerName='Genesis' password='e' />
         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27515' ServerName='Genesis 2' password='e' />
         </div>
+        <div className="w-full max-w-5xl h-[50vh] overflow-y-scroll scrollbar-thin">
+          <WorkshopList ModIDsURL={modIDURL} />
+        </div>
         <div className="flex flex-col border-slate-600 border-4 rounded-lg hover:border-green-500 transition-colors duration-150 w-full max-w-5xl">
           <div className="flex gap-2">
           <button className={cn('bg-[#1e1e1e] outline-0 active:bg-[#3a3a3a]  disabled:bg-[#272727] enabled:hover:border-2 border-gray-500 py-1 px-2 w-full flex-grow shadow-md transition-all ')} disabled={fileName === "gameini"} onClick={() => setFileName("gameini")}>Game Settings</button>
@@ -78,7 +81,7 @@ export default function Home() {
         <div className="w-full h-full flex justify-center">
         <div className={cn(styles.center, "flex-col gap-4 rounded-lg overflow-hidden")}/> 
         <Editor
-          height="50vh"
+          height="30vh"
           width="100%"
           path={file.name}
           defaultLanguage={file.language}
@@ -90,9 +93,6 @@ export default function Home() {
           />
         </div>
 
-        </div>
-        <div className="w-full max-w-5xl h-96 overflow-y-scroll">
-          <WorkshopList ModIDsURL={modIDURL} />
         </div>
 
       </main>
