@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { gameini, gusini } from './../components/files'
 import ServerButtonComponent from '../components/ServerButtonComponent'
 import WorkshopList from '../components/WorkshopList'
+import GameListItem from '../components/GameListItem'
 const inter = Inter({ subsets: ['latin'] })
 
 interface EditorFile {
@@ -20,31 +21,6 @@ export default function Home() {
 
   const [state, setstate] = useState("")
 
-  const options = {
-    cursorSmoothCaretAnimation: true,
-    cursorBlinking: "expand",
-    minimap: {enabled: false},
-    links: false,
-    readOnly: true,
-    smoothScrolling: true,
-  }
-  const files: { [key: string]: EditorFile } = {
-    "gameini": {
-      name: "gameini",
-      language: "ini",
-      value: gameini,
-    },
-    "gusini": {
-      name: "gusini",
-      language: "ini",
-      value: gusini,
-    },
-  };
-  const modIDURL = '2874066786*1522327484*2212177129*1445395055*731604991*972887420*889745138*821530042*848498678*1404697612*670764308*702828089*1609138312*1814953878*2862832839*816908578*2871123928*1428596566*1295978823*2876145300*2848812341*2856914628'
-
-  const [fileName, setFileName] = useState("gameini");
-  const CurrentIP = '124.187.142.191'
-  const file = files[fileName];
   return (
     
     <>
@@ -55,46 +31,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <p className="font-bold text-red-500 p-3 mb-3 font-sans text-lg">Game may appear frozen while joining.</p>
+
         <div className={cn(styles.center, "flex-col gap-4 rotate-90")}/> 
+        <div className={cn(styles.center, "flex-col gap-4 rotate-45 top-1/4")}/>
+        <div className={cn(styles.center, "flex-col gap-4 rotate-180 top-2/4")}/>
+        <p className='text-gray-200 font-semibold text-4xl m-3 mb-5'>Servers</p>
 
+        <ol className="w-full">
+          <GameListItem imageurl='https://i.imgur.com/UC61Xdr.png' name="Ascension (Cluster)" path="./ark/ascension" />
+          <GameListItem imageurl='https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/img/minecraft-creeper-face.jpg' name="Vanilla"/>
+          <GameListItem imageurl='https://media.forgecdn.net/avatars/548/411/637883945542381234.png' name="Wild Fire"/>
+          <GameListItem imageurl='https://media.forgecdn.net/avatars/545/436/637878854786038744.png' name="Fabulous"/>
 
-        <div className="grid grid-flow-row gap-1 grid-cols-2 justify-around m-3 w-full max-w-5xl">
-        <div className="bg-[#1e1e1e] p-3 col-span-2 text-center font-mono font-bold text-4xl m-0 rounded-md py-[0.45rem]">
-          Quartex Cluster
-        </div>
-        <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27015' ServerName='Island' password='e' />
-        <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27115' ServerName='Scorched' password='e' />
-        <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27215' ServerName='Abberant' password='e' />
-        <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27315' ServerName='Extinct' password='e' />
-        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27415' ServerName='Genesis' password='e' />
-        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27515' ServerName='Genesis 2' password='e' />
-        </div>
-        <div className="flex flex-col border-slate-600 border-4 rounded-lg hover:border-green-500 transition-colors duration-150 w-full max-w-5xl">
-          <div className="flex gap-2">
-          <button className={cn('bg-[#1e1e1e] outline-0 active:bg-[#3a3a3a]  disabled:bg-[#272727] enabled:hover:border-2 border-gray-500 py-1 px-2 w-full flex-grow shadow-md transition-all ')} disabled={fileName === "gameini"} onClick={() => setFileName("gameini")}>Game Settings</button>
-          <button className={cn('bg-[#1e1e1e] outline-0 active:bg-[#3a3a3a] disabled:bg-[#272727] enabled:hover:border-2 border-gray-500 py-1 px-2 w-full flex-grow shadow-md transition-all')} disabled={fileName === "gusini"} onClick={() => setFileName("gusini")}>Game User Settings</button>
-          </div>
-        <div className="w-full h-full flex justify-center">
-        <div className={cn(styles.center, "flex-col gap-4 rounded-lg overflow-hidden")}/> 
-        <Editor
-          height="50vh"
-          width="100%"
-          path={file.name}
-          defaultLanguage={file.language}
-          defaultValue={file.value}
-          theme="vs-dark"
-          options={options}
-          className=""
-          onChange={() => {console.log('aaa')}}
-          />
-        </div>
-
-        </div>
-        <div className="w-full max-w-5xl h-96 overflow-y-scroll">
-          <WorkshopList ModIDsURL={modIDURL} />
-        </div>
-
+        </ol>
       </main>
     </>
   )
