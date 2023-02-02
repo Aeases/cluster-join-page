@@ -5,7 +5,7 @@ import styles from '../../styles/Home.module.css'
 import cn from 'classnames'
 import Editor from '@monaco-editor/react'
 import { useState } from 'react'
-import { gameini, gusini } from '../../components/files'
+import { gameini, gusini } from './../../components/files'
 import ServerButtonComponent from '../../components/ServerButtonComponent'
 import WorkshopList from '../../components/WorkshopList'
 const inter = Inter({ subsets: ['latin'] })
@@ -40,7 +40,7 @@ export default function Home() {
       value: gusini,
     },
   };
-  const modIDURL = '2874066786*1522327484*2212177129*1445395055*731604991*972887420*889745138*821530042*848498678*1404697612*670764308*702828089*1609138312*1814953878*2862832839*816908578*2871123928*1428596566*1295978823*2876145300*2848812341*2856914628'
+  const modIDURL = '2874066786*1522327484*2212177129*1445395055*731604991*972887420*889745138*1206350321*1195125628*821530042*848498678*1092784125*1404697612*670764308*702828089*1609138312*1814953878*2121156303*2862832839*816908578*2871123928*1428596566*1295978823*2876145300*2848812341*2856914628'
 
   const [fileName, setFileName] = useState("gameini");
   const CurrentIP = '124.187.142.191'
@@ -67,8 +67,11 @@ export default function Home() {
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27115' ServerName='Scorched' password='e' />
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27215' ServerName='Abberant' password='e' />
         <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27315' ServerName='Extinct' password='e' />
-        <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27415' ServerName='Genesis' password='e' />
+        <ServerButtonComponent Locked={false} IP={CurrentIP} queryport='27415' ServerName='Genesis' password='e' />
         <ServerButtonComponent Locked={true} IP={CurrentIP} queryport='27515' ServerName='Genesis 2' password='e' />
+        </div>
+        <div className="w-full max-w-5xl h-[50vh] overflow-y-scroll scrollbar-thin">
+          <WorkshopList ModIDsURL={modIDURL} />
         </div>
         <div className="flex flex-col border-slate-600 border-4 rounded-lg hover:border-green-500 transition-colors duration-150 w-full max-w-5xl">
           <div className="flex gap-2">
@@ -78,7 +81,7 @@ export default function Home() {
         <div className="w-full h-full flex justify-center">
         <div className={cn(styles.center, "flex-col gap-4 rounded-lg overflow-hidden")}/> 
         <Editor
-          height="50vh"
+          height="30vh"
           width="100%"
           path={file.name}
           defaultLanguage={file.language}
@@ -90,9 +93,6 @@ export default function Home() {
           />
         </div>
 
-        </div>
-        <div className="w-full max-w-5xl h-96 overflow-y-scroll">
-          <WorkshopList ModIDsURL={modIDURL} />
         </div>
 
       </main>
