@@ -1,56 +1,59 @@
 import { type } from "os"
 import { Url } from "url"
-import { Fragment, useState } from 'react'
+import { Dispatch, Fragment, SetStateAction, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-
+import Image from "next/image"
+import { Oval } from "react-loading-icons"
 
 interface GameListItemProps {
     imageurl: Url,
     name: string,
     path?: string
     type?: 'ip' | 'page'
+    serveraddress?: string
 }
 
 
 
+
 const GameListItem = (props: GameListItemProps) => {
-    const {imageurl, name, path, type} = props
+    const [isOpen, setIsOpen] = useState(false)
+    const {imageurl, name, path, type, serveraddress} = props
     if (type == 'page' && path) {
         return (
-        <a href={path && `${path}`}>
+          <a href={path && `${path}`}>
             <ListItemVisual imageurl={imageurl} name={name} /> 
-        </a>
+          </a>
         )
     } else if (type == 'ip') {
-      const [isOpen, setIsOpen] = useState(false)
-  return (
-    <button onClick={openModal}>
-        <ListItemVisual imageurl={imageurl} name={name}/>
-    </button>
-    
-    <HoverAboveModelHeadlessUI isOpen={isOpen} setIsOpen={setIsOpen} />
-    
-  )
+        return(
+          <>
+          <button onClick={() => setIsOpen(true)} className="flex w-full">
+              <ListItemVisual imageurl={imageurl} name={name}/>
+          </button>
+
+          <HoverAboveModelHeadlessUI isOpen={isOpen} setIsOpen={setIsOpen} name={name} imageurl={imageurl} serveraddress={serveraddress}  />
+          </>
+
+        )
     }
 }
 
 function ListItemVisual({imageurl, name}: {imageurl: Url, name: string}) {
     return (
-        <div className="my-2 mx-auto h-14 flex bg-[#1e1e1e] active:bg-[#3a3a3a] active:ring-1 p-2 rounded-lg hover:ring-2 ring-gray-500 transition-all duration-200">
-            <img className="scale-125 rounded-lg" src={`${imageurl}`}/>
+        <div className="my-2 w-full mx-auto h-14 flex-grow basis-full flex bg-[#1e1e1e] active:bg-[#3a3a3a] active:ring-1 p-2 rounded-lg hover:ring-2 ring-gray-500 transition-all duration-200">
+            <Image width="256" height="256" alt="Image of Game Server" className="scale-125 h-auto w-auto rounded-lg" src={`${imageurl}`}/>
             <p className="my-auto mx-auto font-bold text-2xl">{name}</p>
         </div>
     )
 }
 
-interface HoverAboveModelHeadlessUIProps {
-  name: string,
-  imageurl: Url,
-  isOpen
-
+interface HoverAboveModelHeadlessUIProps extends GameListItemProps {
+  isOpen: boolean
+  setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
-function HoverAboveModelHeadlessUI({name, imageurl, isOpen, setIsOpen}: infer) {
+function HoverAboveModelHeadlessUI({name, imageurl, isOpen, setIsOpen, serveraddress}: HoverAboveModelHeadlessUIProps) {
     function closeModal() {
         setIsOpen(false)
       }
@@ -84,26 +87,32 @@ function HoverAboveModelHeadlessUI({name, imageurl, isOpen, setIsOpen}: infer) {
     leaveFrom="opacity-100 scale-100"
     leaveTo="opacity-0 scale-95"
   >
-    <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+    <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-md bg-[#1e1e1ee8] p-6 text-left align-middle shadow-xl transition-all">
       <Dialog.Title
         as="h3"
         className="text-lg font-medium leading-6 text-gray-900"
       >
-        {name}
+        <div className="flex">
+        <p className="text-3xl font-bold my-auto text-white">{name}</p>
+        <span className="ml-auto"><Image src={imageurl.toString()} width='256' alt="Image of Game" height='256' className="w-12 h-12 rounded-xl drop-shadow-2xl inline"></Image></span>
+        </div>
+
       </Dialog.Title>
-      <div className="mt-2">
-        <p className="text-sm text-gray-500">
-          {imageurl as string}
-        </p>
+      <div className="mt-2 flex flex-row">
+        <div className="text-sm text-white flex rounded-md w-max h-8 bg-[#1e1e1e] border">
+          <p className="h-full p-1 flex justify-center px-2 border-r-2 ring-0 hover:ring-2 rounded-tl-md rounded-bl-md ring-gray-500 transition-all ">Copy</p>
+          <p className="h-full p-1 flex justify-start px-3">{serveraddress ? serveraddress : '5' }</p>
+        </div>
+        <span className="ml-auto"><Oval strokeWidth='6' stroke="gray" height='33px' className='text-base scale-75 justify-self-end flex-grow  text-gray-300'/></span>
       </div>
 
       <div className="mt-4">
         <button
           type="button"
-          className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="inline-flex transition-all justify-center rounded-md border border-transparent px-2 py-1 text-lg font-medium ring-0 hover:ring-2 ring-gray-500 bg-[#3a3a3a]"
           onClick={closeModal}
         >
-          Return
+          Close
         </button>
       </div>
     </Dialog.Panel>
