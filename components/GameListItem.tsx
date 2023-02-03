@@ -36,7 +36,7 @@ const GameListItem = (props: GameListItemProps) => {
           </>
 
         )
-    }
+    } else return (<p>nodata</p>)
 }
 
 function ListItemVisual({imageurl, name}: {imageurl: Url, name: string}) {
