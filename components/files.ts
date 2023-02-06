@@ -15,8 +15,8 @@ BabyCuddleIntervalMultiplier=0.08
 BabyCuddleGracePeriodMultiplier=5.0
 BabyCuddleLoseImprintQualitySpeedMultiplier=0.1
 bPassiveDefensesDamageRiderlessDinos=true
-WildDinoCharacterFoodDrainMultiplier=1.5
-PassiveTameIntervalMultiplier=0.2
+WildDinoCharacterFoodDrainMultiplier=1
+PassiveTameIntervalMultiplier=1
 LayEggIntervalMultiplier=0.6
 bUseCorpseLocator=true
 bDisableStructurePlacementCollision=true
@@ -31,8 +31,8 @@ SupplyCrateLootQualityMultiplier=7.5
 FishingLootQualityMultiplier=7.5
 AdminLogging=true
 PerLevelStatsMultiplier_Player[0]=2
-PerLevelStatsMultiplier_DinoTamed[0]=2
-PerLevelStatsMultiplier_DinoWild[0]=4
+PerLevelStatsMultiplier_DinoTamed[0]=1
+PerLevelStatsMultiplier_DinoWild[0]=1
 PerLevelStatsMultiplier_Player[1]=5
 PerLevelStatsMultiplier_DinoTamed[1]=7.5
 PerLevelStatsMultiplier_DinoWild[1]=2.5
@@ -55,8 +55,8 @@ PerLevelStatsMultiplier_Player[7]=1000
 PerLevelStatsMultiplier_DinoTamed[7]=1000
 PerLevelStatsMultiplier_DinoWild[7]=1000
 PerLevelStatsMultiplier_Player[8]=3
-PerLevelStatsMultiplier_DinoTamed[8]=1
-PerLevelStatsMultiplier_DinoWild[8]=4
+PerLevelStatsMultiplier_DinoTamed[8]=2
+PerLevelStatsMultiplier_DinoWild[8]=1
 PerLevelStatsMultiplier_Player[9]=3
 PerLevelStatsMultiplier_Player[10]=2
 PerLevelStatsMultiplier_DinoTamed[10]=2
@@ -75,6 +75,9 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SoulGun_DS_C",EngramHid
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SoulFinder_DS_C",EngramHidden=false,EngramPointsCost=5,EngramLevelRequirement=51)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_SoulTerminal_DS_C",EngramHidden=false,EngramPointsCost=60,EngramLevelRequirement=88)
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_NarcTable_C",EngramHidden=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_AwesomeTeleporters_Remote_C",EngramHidden=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_AwesomeTeleporters_Teleporter_C",EngramHidden=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_AwesomeTeleporters_DinoTracker_C",EngramHidden=true)
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_RawMeat_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_RawPrimeMeat_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
 ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemConsumable_RawMeat_Fish_C",Quantity=(MaxItemQuantity=1000.0, bIgnoreMultiplier=true))
@@ -221,10 +224,10 @@ HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_ShardRe
 HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Silicate_C",Multiplier=2.0)
 OverrideMaxExperiencePointsPlayer=839801300000000000000000000000
 OverrideMaxExperiencePointsDino=50924810000000000000000000000000
-KillXPMultiplier=1.5
-HarvestXPMultiplier=1.5
-CraftXPMultiplier=1.5
-GenericXPMultiplier=1.5
+KillXPMultiplier=3.5
+HarvestXPMultiplier=2.5
+CraftXPMultiplier=3.5
+GenericXPMultiplier=2
 SpecialXPMultiplier=2
 ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntries_DeathWorm_C",NPCSpawnEntries=((NPCsToSpawnStrings=("Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'"))),NPCSpawnLimits=((NPCClassString="Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'")))
 ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntries_RexSolo_C",NPCSpawnEntries=((NPCsToSpawnStrings=("Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'"))),NPCSpawnLimits=((NPCClassString="Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'")))
@@ -243,6 +246,132 @@ ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_
 ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntriesWater_C",NPCSpawnEntries=((NPCsToSpawnStrings=("Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'"))),NPCSpawnLimits=((NPCClassString="Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'")))
 ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntriesWyvern_C",NPCSpawnEntries=((NPCsToSpawnStrings=("Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'"))),NPCSpawnLimits=((NPCClassString="Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'")))
 ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntriesWyvernTrench_C",NPCSpawnEntries=((NPCsToSpawnStrings=("Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'"))),NPCSpawnLimits=((NPCClassString="Blueprint'/Game/Mods/Jpark/Camo/CamoIndom_Character_BP.CamoIndom_Character_BP'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesBee_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_11_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_12_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesIceCave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesQuetz_EX_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesSwamp_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Beavers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityCenter_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityCenter_DangerClose_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityObelisk_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Building_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Building_DangerClose_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Fliers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_City_Park2_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_City_Trench_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_ParkWater_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_RedwoodWater_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_City_Buffer_1_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_City_Buffer_2_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_DesertBuffer_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Easy_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_ForbiddenZone_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Hard_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Medium_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_NorthCraterForest_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_North_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_OilFields_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_OilFields_Fliers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_SnowBuffer_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_South_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Sulfur_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertCave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertMountain_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertOasis_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_Forest_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Cave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Desert_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Ice_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_1_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_Purlovia_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_TEMP_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesBee_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_11_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_12_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesIceCave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesQuetz_EX_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesSwamp_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Beavers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityCenter_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityCenter_DangerClose_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityObelisk_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Building_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Building_DangerClose_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Fliers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_City_Park2_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_City_Trench_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_ParkWater_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_RedwoodWater_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_City_Buffer_1_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_City_Buffer_2_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_DesertBuffer_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Easy_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_ForbiddenZone_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Hard_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Medium_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_NorthCraterForest_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_North_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_OilFields_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_OilFields_Fliers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_SnowBuffer_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_South_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Sulfur_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertCave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertMountain_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertOasis_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_Forest_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Cave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Desert_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Ice_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_1_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_Purlovia_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_TEMP_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Snow_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Snow_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesBee_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_11_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_12_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesCaveTek_Hard_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesIceCave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesQuetz_EX_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesSwamp_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Beavers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityCenter_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityCenter_DangerClose_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityObelisk_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Building_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Building_DangerClose_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_CityTier2_Fliers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_City_Park2_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_City_Trench_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_ParkWater_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_RedwoodWater_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_City_Buffer_1_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_City_Buffer_2_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_DesertBuffer_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Easy_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_ForbiddenZone_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Hard_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Medium_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_NorthCraterForest_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_North_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_OilFields_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_OilFields_Fliers_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_SnowBuffer_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_South_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_Wasteland_Sulfur_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertCave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertMountain_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_DesertOasis_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_Forest_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Cave_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Desert_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Ext_DinoSpawnEntries_ShallowWater_Ice_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_1_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_Purlovia_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))
+ConfigSubtractNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="T_Ext_DinoSpawnEntriesSnow_TEMP_C",NPCSpawnEntries=( (NPCsToSpawnStrings=("Gryphon_Pygmy_Character_BP_C"))), NPCSpawnLimits=((NPCClassString="Gryphon_Pygmy_Character_BP_C'")))ConfigOverrideItemCraftingCosts=(ItemClassString="SoulTraps_DS_C",BaseCraftingResourceRequirements=((ResourceItemTypeString="PrimalItemResource_MetalIngot_C",BaseResourceRequirement=4.0,bCraftingRequireExactResourceType=false),(ResourceItemTypeString="PrimalItemResource_Oil_C",BaseResourceRequirement=8.0,bCraftingRequireExactResourceType=false),(ResourceItemTypeString="PrimalItemResource_Polymer_C",BaseResourceRequirement=16.0,bCraftingRequireExactResourceType=false),(ResourceItemTypeString="PrimalItemResource_Hide_C",BaseResourceRequirement=10.0,bCraftingRequireExactResourceType=false),(ResourceItemTypeString="PrimalItemResource_Crystal_C",BaseResourceRequirement=20.0,bCraftingRequireExactResourceType=false),(ResourceItemTypeString="PrimalItemResource_Fibers_C",BaseResourceRequirement=30.0,bCraftingRequireExactResourceType=false)))
 `;
 
 export const gusini =
@@ -266,7 +395,7 @@ ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="PrimalInventoryBP_Generi
 ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_IceCaveTier3",MinItemSets=0,MaxItemSets=1,NumItemSetsPower=0,bSetsRandomWithoutReplacement=True,ItemSets=((SetName="Carcha Saddle",ItemEntries=((ItemEntryName="Blueprints: Saddles",Items=(BlueprintGeneratedClass'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_CarchaSaddle.PrimalItemArmor_CarchaSaddle_C'),MinQuantity=1.000000,MinQuality=1.000000,MaxQuality=1.200000,bForceBlueprint=False,ChanceToBeBlueprintOverride=0.500000,ChanceToActuallyGiveItem=0.900000)),SetWeight=0.023000,bItemsRandomWithoutReplacement=True)),bAppendItemSets=True,bAppendPreventIncreasingMinMaxItemSets=False)
 
 [/Script/Engine.GameSession]
-MaxPlayers=70
+MaxPlayers=5
 
 [/Script/ShooterGame.ShooterGameUserSettings]
 ActiveLingeringWorldTiles=6
@@ -347,8 +476,8 @@ DerpArmorRadius=8000
 DerpStructureRadius=8000
 
 [MessageOfTheDay]
-Duration=60
-Message=When Transferring/Ascending to another ark MAKE SURE TO SELECT SHOW PASSWORD LOCKED SESSIONS!!!!!
+Duration=30
+Message=discord.gg/rgVRqerswa
 
 [ScalabilityGroups]
 sg.AntiAliasingQuality=3
@@ -365,25 +494,25 @@ sg.ViewDistanceQuality=3
 
 [AwesomeTeleporters]
 AllowLastRemoteLocation=0
-AllowTeleportingToPlayers=1
-AllowTeleportingWildDinos=1
+AllowTeleportingToPlayers=0
+AllowTeleportingWildDinos=0
 TeleportSameTeamOnly=1
-AllowTeleportersOnSaddles=1
+AllowTeleportersOnSaddles=0
 TeleportersRequirePower=1
 AllowTeleportingToObelisks=0
 AllowTeleportingInPreventionZones=0
-AllowCorpseFinder=1
+AllowCorpseFinder=0
 CorpseRequiresRemote=1
 AllowFindDinos=0
 AllowDinoUploads=0
 DropInventoryOnUpload=1
 UploadedDinosLayEggs=0
 AdminsSeeAllTeleporters=0
-AllowPlacingTeleportersOnWalls=1
+AllowPlacingTeleportersOnWalls=0
 TeleportersAreTransmitters=0
 CheckTameLimitBeforeDownloading=0
 MaxTeleportersPerTribe=0
-TeleportCooldown=10
+TeleportCooldown=9999
 CombatCooldown=5
 MaxCharactersPerTeleport=0
 EnemyFoundationPreventionRange=0
@@ -402,17 +531,24 @@ AllowPlayerTargeting=True
 AllowStructureTargeting=False
 AllowCrateTargeting=True
 AllowLootTargeting=False
-AllowEggTargeting=True
+AllowEggTargeting=False
 
 [ServerSettings]
-PreventDownloadDinos=False
+PreventDownloadDinos=True
 PreventDownloadItems=True
 PreventDownloadSurvivors=False
-PreventUploadDinos=False
+PreventUploadDinos=True
 PreventUploadItems=True
 PreventUploadSurvivors=False
 ActiveMods=2874066786,1522327484,2212177129,1445395055,731604991,972887420,889745138,821530042,848498678,1404697612,670764308,702828089,1609138312,1814953878,2862832839,816908578,2871123928,1428596566,1295978823,2876145300,2848812341,2856914628
-DinoCharacterHealthRecoveryMultiplier=5.0
+DifficultyOffset=1.00
+DinoDamageMultiplier=2.0000
+DinoResistanceMultiplier=0.5000
+PlayerDamageMultiplier=1.5
+PlayerResistanceMultiplier=0.6666
+DinoCharacterHealthRecoveryMultiplier=4.0
+AutoSavePeriodMinutes=15.000000
+AutoSavePeriodMinutes=60.000000
 AllowAnyoneBabyImprintCuddle=True
 AlwaysNotifyPlayerJoined=False
 AlwaysNotifyPlayerLeft=False
@@ -425,7 +561,6 @@ AllowIntegratedSPlusStructures=True
 AllowRaidDinoFeeding=True
 AllowThirdPersonPlayer=true
 AutoDestroyDecayedDinos=False
-AutoSavePeriodMinutes=60.000000
 ClampItemSpoilingTimes=False
 CrossARKAllowForeignDinoDownloads=False
 DayTimeSpeedScale=.7
@@ -460,22 +595,22 @@ PvEAllowStructuresAtSupplyDrops=False
 PvEDinoDecayPeriodMultiplier=1.000000
 PvPStructureDecay=false
 RCONEnabled=True
-RCONPort=32331
+RCONPort=37315
 RCONServerGameLogBuffer=600.000000
 RaidDinoCharacterFoodDrainMultiplier=1.000000
-ServerAdminPassword=99a2cade-2e77-4206-9931-7d41305d76e1
+ServerAdminPassword=619db059-aacc-407f-b412-6abb4aa9237d
 AdminLogging=true
 ServerCrosshair=true
 ServerForceNoHUD=False
 ServerHardcore=False
 ServerPVE=False
-ServerPassword=e
+ServerPassword=
 ShowFloatingDamageText=True
 ShowMapPlayerLocation=true
 StructurePickupHoldDuration=0.500000
 StructurePickupTimeAfterPlacement=30.000000
 StructurePreventResourceRadiusMultiplier=1.000000
-TamingSpeedMultiplier=40.000000
+TamingSpeedMultiplier=10.000000
 TheMaxStructuresInRange=10500.000000
 TribeNameChangeCooldown=15.000000
 UseOptimizedHarvestingHealth=False
@@ -488,6 +623,14 @@ AllowBossCaveRelease=False
 AllowBossArenaRelease=False
 LockImprinter=True
 SoulTrapDelay=2.0
+EnableFruitSeeding=true
+EnableHoneyGeneration=true
+EnableIncubation=true
+EnableMiscPoopGeneration=true
+EnablePassiveGeneration=true
+EnablePoopConversion=true
+EnablePoopGeneration=true
+EnableWoolGeneration=true
 
 [CKF_Config]
 CeilingIsFoundation=true
@@ -654,5 +797,5 @@ Rock3=1
 Rock4=1
 
 [SessionSettings]
-SessionName=Quartex - Extinct
+SessionName=Quartex - Genesis
 `;
