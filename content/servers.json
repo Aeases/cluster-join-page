@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Wild Fire",
+        "address": "wildfire.quartex.xyz",
+        "imageurl": "https://media.forgecdn.net/avatars/548/411/637883945542381234.png"
+    },
+    {
+        "name": "Fabulous",
+        "address": "fabulous.quartex.xyz",
+        "imageurl": "https://media.forgecdn.net/avatars/545/436/637878854786038744.png"
+    },
+    {
+        "name": "Vanilla",
+        "address": "vanilla.quartex.xyz",
+        "imageurl": "https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/img/minecraft-creeper-face.jpg"
+    }
+]

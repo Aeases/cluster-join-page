@@ -9,6 +9,7 @@ import { gameini, gusini } from './../components/files'
 import ServerButtonComponent from '../components/ServerButtonComponent'
 import WorkshopList from '../components/WorkshopList'
 import GameListItem from '../components/GameListItem'
+import serverjson from '../content/servers.json'
 import { Url } from 'url'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,10 +19,17 @@ interface EditorFile {
   value: any,
 }
 
+type ServerJson = {
+  name: string,
+  address: string,
+  imageurl: string
+}
+
 export default function Home() {
 
   const [state, setstate] = useState("")
-
+  const servers: Array<ServerJson> = serverjson
+  console.log(servers)
   return (
     
     <>
@@ -39,10 +47,15 @@ export default function Home() {
         <p className='text-gray-200 font-semibold text-4xl m-3 mb-5'>Servers</p>
 
         <ol className="w-full">
-          <GameListItem imageurl={'https://media.discordapp.net/attachments/963117719752953876/1071020260280504330/UC61Xdr.png' as unknown as Url} name="Ascension (Cluster)" path="./ark/ascension" type='page'/>
-          <GameListItem imageurl={'https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/img/minecraft-creeper-face.jpg' as unknown as Url} name="Vanilla" type='ip'/>
+          <GameListItem imageurl={'https://media.discordapp.net/attachments/963117719752953876/1071020260280504330/UC61Xdr.png'} name="Ascension (Cluster)" path="./ark/ascension" type='page'/>
+        {servers.map((server) => {
+          return (<GameListItem imageurl={server.imageurl} name={server.name} serveraddress={server.address} type="ip"/>)
+        })}
+
+
+{/*           <GameListItem imageurl={'https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/img/minecraft-creeper-face.jpg' as unknown as Url} name="Vanilla" type='ip'/>
           <GameListItem imageurl={'https://media.forgecdn.net/avatars/548/411/637883945542381234.png' as unknown as Url} name="Wild Fire" type='ip' serveraddress='192.168.0.1:24322'/>
-          <GameListItem imageurl={'https://media.forgecdn.net/avatars/545/436/637878854786038744.png' as unknown as Url} name="Fabulous" type='ip' serveraddress='192.168.0.1:24323'/>
+          <GameListItem imageurl={'https://media.forgecdn.net/avatars/545/436/637878854786038744.png' as unknown as Url} name="Fabulous" type='ip' serveraddress='192.168.0.1:24323'/> */}
 
         </ol>
       </main>

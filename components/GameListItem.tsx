@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Oval } from "react-loading-icons"
 
 interface GameListItemProps {
-    imageurl: Url,
+    imageurl: string,
     name: string,
     path?: string
     type?: 'ip' | 'page'
@@ -39,7 +39,7 @@ const GameListItem = (props: GameListItemProps) => {
     } else return (<p>nodata</p>)
 }
 
-function ListItemVisual({imageurl, name}: {imageurl: Url, name: string}) {
+function ListItemVisual({imageurl, name}: {imageurl: string, name: string}) {
     return (
         <div className="my-2 w-full mx-auto h-14 flex-grow basis-full flex bg-[#1e1e1e] active:bg-[#3a3a3a] active:ring-1 p-2 rounded-lg hover:ring-2 ring-gray-500 transition-all duration-200">
             <Image width="256" height="256" alt="Image of Game Server" className="scale-125 h-auto w-auto rounded-lg" src={`${imageurl}`}/>
@@ -60,7 +60,7 @@ function HoverAboveModelHeadlessUI({name, imageurl, isOpen, setIsOpen, serveradd
     
       function openModal() {
         setIsOpen(true)
-      }
+      } 
     return(
     <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -99,9 +99,9 @@ function HoverAboveModelHeadlessUI({name, imageurl, isOpen, setIsOpen, serveradd
 
       </Dialog.Title>
       <div className="mt-2 flex flex-row">
-        <div className="text-sm text-white flex rounded-md w-max h-8 bg-[#1e1e1e] border">
-          <p className="h-full p-1 flex justify-center px-2 border-r-2 ring-0 hover:ring-2 rounded-tl-md rounded-bl-md ring-gray-500 transition-all ">Copy</p>
-          <p className="h-full p-1 flex justify-start px-3">{serveraddress ? serveraddress : '5' }</p>
+        <div className="text-sm text-white flex rounded-md w-max h-8 bg-[#1e1e1e] border-2 group overflow-hidden">
+          <button className="h-full p-1 flex justify-center px-2 border-r-2 ring-0 group-hover:bg-white group-hover:text-black ring-gray-500 transition-all ">Copy</button>
+          <p className="h-full p-1 flex justify-start px-3 group-hover:bg-[#60606060] transition-colors duration-500">{serveraddress ? serveraddress : '5' }</p>
         </div>
         <span className="ml-auto"><Oval strokeWidth='6' stroke="gray" height='33px' className='text-base scale-75 justify-self-end flex-grow  text-gray-300'/></span>
       </div>
@@ -109,7 +109,7 @@ function HoverAboveModelHeadlessUI({name, imageurl, isOpen, setIsOpen, serveradd
       <div className="mt-4">
         <button
           type="button"
-          className="inline-flex transition-all justify-center rounded-md border border-transparent px-2 py-1 text-lg font-medium ring-0 hover:ring-2 ring-gray-500 bg-[#3a3a3a]"
+          className="inline-flex transition-all justify-center rounded-md border border-transparent px-2 py-2 text-lg font-medium ring-0 hover:ring-2 ring-gray-500 bg-[#3a3a3a]"
           onClick={closeModal}
         >
           Close
